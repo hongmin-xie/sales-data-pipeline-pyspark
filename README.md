@@ -6,6 +6,16 @@ An educational ETL portfolio project for retail sales analytics using entirely s
 
 Process heterogeneous CSV sales records, join a product reference table, validate data quality and calculate global and category-level business KPIs.
 
+## Technologies
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-4.0.1-orange?style=flat-square)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+
 ## Architecture
 
 ```mermaid
@@ -27,6 +37,25 @@ flowchart LR
 - Revenue, costs, distinct orders and customers, margin, markup and margin percentage
 - Reconciliation of additive metrics and CSV export using Spark
 
+
+## Project Structure
+
+```text
+sales-data-pipeline-pyspark/
+├── data/
+│   ├── orders_raw.csv
+│   └── product_ref.csv
+├── notebooks/
+│   └── retail_sales.ipynb
+├── src/
+│   └── pipeline.py
+├── tests/
+│   └── test_pipeline.py
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
+
 ## Run locally
 
 Requires Python 3.10+ and Java 17 or 21 compatible with Spark 4.0.1.
@@ -41,7 +70,7 @@ python -m pytest -q
 
 Spark writes CSV part files under `outputs/global/` and `outputs/by_category/`.
 
-## Expected results on synthetic data
+## Results & Business KPIs
 
 | Metric | Expected value |
 |---|---:|
